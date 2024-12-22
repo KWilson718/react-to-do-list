@@ -1,7 +1,9 @@
+import './Footer.css'
+
 function Footer() {
     return (
         <>
-            <div>
+            <div id='footerContainer'>
                 <p>This Project Was Created With React Through Vite</p>
             </div>
         </>

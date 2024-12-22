@@ -1,7 +1,9 @@
+import './Body.css'
+
 function Body() {
     return (
         <>
-            <div>
+            <div id='bodyContainer'>
                 <p>This is the Body Section. The Data will go here.</p>
             </div>
         </>
