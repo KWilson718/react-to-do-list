@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    text-align: center;
+}
+
+#headerComponent {
+    min-height: 10vh;
+}
+
+#bodyComponent {
+    min-height: 85vh;
+}
+
+#footerComponent {
+    min-height: 5vh;
+}
