@@ -1,9 +1,7 @@
-import './Header.css'
-
 function Header() {
     return (
         <>
-            <div id='titleContainer'>
+            <div id='headerContainer'>
                 <h1>Reacted To Do List</h1>
             </div>
         </>

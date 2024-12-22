@@ -1,3 +1,19 @@
 body {
     margin-top: 0;
+    text-align: center;
+}
+
+/* Styling for Header */
+#headerContainer {
+    min-height: 5vh;
+}
+
+/* Styling for Body */
+#bodyContainer {
+    min-height: 85vh;
+}
+
+/* Styling for Footer */
+#footerContainer {
+    min-height: 5vh;
 }

@@ -1,5 +1,3 @@
-import './Body.css'
-
 function Body() {
     return (
         <>
