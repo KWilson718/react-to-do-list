@@ -9,6 +9,10 @@ export default function Body({ onSubmit }) {
         setTasks((prevTasks) => [...prevTasks, taskData]);
     };
 
+    const handleDeleteTask = (indexToDelete) => {
+        setTasks((prevTasks) => prevTasks.filter((_, index) => index !== indexToDelete));
+    };
+
     return (
         <div id='bodyComponent'>
             <div className='bodySection'>
@@ -17,7 +21,7 @@ export default function Body({ onSubmit }) {
             </div>
             <div className='bodySection'>
                 <h2 className='sectionTitle'>Submitted Tasks:</h2>
-                <TaskSection taskList={tasks} />
+                <TaskSection taskList={tasks} onDeleteTask={handleDeleteTask} />
             </div>
         </div>
     );

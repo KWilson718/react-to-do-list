@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function TaskSection({ taskList }) {
+export default function TaskSection({ taskList, onDeleteTask }) {
     if (!taskList || taskList.length === 0) {
         return (
             <div id="taskSection">
@@ -57,7 +57,11 @@ export default function TaskSection({ taskList }) {
                                         {task.timeFrame || "No Time Frame"}
                                     </TableCell>
                                     <TableCell align="right">
-                                        <IconButton edge="end" aria-label="delete">
+                                        <IconButton 
+                                            edge="end" 
+                                            aria-label="delete"
+                                            onClick={() => onDeleteTask(index)}
+                                        >
                                             <DeleteIcon />
                                         </IconButton>
                                     </TableCell>
