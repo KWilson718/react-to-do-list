@@ -5,8 +5,7 @@ export default function Body({ onSubmit }) {
     const [tasks, setTasks] = useState([]);
 
     const handleNewTask = (taskData) => {
-        setTasks((prevTasks) => [...prevTasks, taskData]); // Add new task to the state
-        console.log('New Task Submitted:', taskData); // Log or handle the data
+        setTasks((prevTasks) => [...prevTasks, taskData]);
     };
 
     return (
@@ -17,6 +16,13 @@ export default function Body({ onSubmit }) {
             </div>
             <div className='bodySection'>
                 <h2>Submitted Tasks:</h2>
+                <ul>
+                    {tasks.map((task, index) => (
+                        <li key={index}>
+                            {task.task} - {task.timeFrame || 'No Time Frame'}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     );
