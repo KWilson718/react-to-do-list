@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+    {/* displays each section's structural comnponents */}
       <div>
         <Header />
         <Body />

@@ -1,3 +1,4 @@
+// Simple component to display text at the top
 export default function Header() {
     return (
         <div id='headerComponent'>

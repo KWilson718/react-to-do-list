@@ -1,3 +1,4 @@
+// Simple component to display text with credits at the bottom
 export default function Footer() {
     return (
         <div id='footerComponent'>

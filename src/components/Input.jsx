@@ -9,7 +9,7 @@ export default function Input({ onSubmit}) {
     const [task, setTask] = useState('');
     const [timeFrame, setTimeFrame] = useState('');
 
-
+    // Provides the key logic for forming a task object to send back to the body component
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent page reload on form submission
         if (task.trim()) {
@@ -37,6 +37,7 @@ export default function Input({ onSubmit}) {
                 autoComplete="off"
                 onSubmit={handleSubmit}
             >
+                {/* Contains the form components for the input section */}
                 <div className='inputRow'>
                     <TextField
                         required

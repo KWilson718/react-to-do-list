@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function TaskSection({ taskList, onDeleteTask }) {
+    // Default case if there are no tasks in the list
     if (!taskList || taskList.length === 0) {
         return (
             <div id="taskSection">
@@ -38,6 +39,7 @@ export default function TaskSection({ taskList, onDeleteTask }) {
                     padding: 2,
                 }}
             >
+                {/* Outputs a table with each task's information, filling in "No Time Frame" if there isn't a timeframe with the associated task. The table also includes a delete button using a MUI Icon */}
                 <TableContainer>
                     <Table>
                         {/* Table Header */}
