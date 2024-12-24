@@ -22,6 +22,10 @@
     padding-bottom: 1rem;
 }
 
+.sectionTitle {
+    padding-bottom: 1rem;
+}
+
 #footerComponent {
     min-height: 5vh;
 }
@@ -40,6 +44,9 @@
     justify-content: space-evenly;
 }
 
-.inputTitle {
-    padding-bottom: 1rem;
+/* Task Section Styling */
+#taskSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

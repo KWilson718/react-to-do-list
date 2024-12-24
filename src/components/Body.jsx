@@ -12,18 +12,11 @@ export default function Body({ onSubmit }) {
     return (
         <div id='bodyComponent'>
             <div className='bodySection'>
-                <h2 className='inputTitle'>Create Task:</h2>
+                <h2 className='sectionTitle'>Create Task:</h2>
                 <Input onSubmit={handleNewTask} />
             </div>
             <div className='bodySection'>
-                <h2>Submitted Tasks:</h2>
-                <ul>
-                    {tasks.map((task, index) => (
-                        <li key={index}>
-                            {task.task} - {task.timeFrame || 'No Time Frame'}
-                        </li>
-                    ))}
-                </ul>
+                <h2 className='sectionTitle'>Submitted Tasks:</h2>
                 <TaskSection taskList={tasks} />
             </div>
         </div>
