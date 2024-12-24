@@ -9,14 +9,12 @@ export default function Input() {
                 component="form"
                 sx={{
                     width: 3/4,
-                    height: 100,
                     border: 1,
                     padding: 2,
                 }}
                 noValidate
                 autoComplete="off"
             >
-                <h3 className='inputTitle'>Create Task</h3>
                 <div className='inputRow'>
                     <TextField
                         required
