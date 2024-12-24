@@ -1,3 +1,4 @@
+/* General Structure */
 * {
     padding: 0;
     margin: 0;
@@ -18,4 +19,22 @@
 
 #footerComponent {
     min-height: 5vh;
+}
+
+
+/* Input Section Styling */
+#inputComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inputTitle {
+    padding-bottom: 1rem;
 }
