@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from "./Input";
 import TaskSection from './TaskSection';
 
 export default function Body({ onSubmit }) {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(() => {
+        // Retrieve tasks from localStorage on initial render
+        const savedTasks = localStorage.getItem('tasks');
+        return savedTasks ? JSON.parse(savedTasks) : [];
+    });
+
+    // Save tasks to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks]);
 
     const handleNewTask = (taskData) => {
         setTasks((prevTasks) => [...prevTasks, taskData]);
