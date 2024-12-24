@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Input from "./Input";
+import TaskSection from './TaskSection';
 
 export default function Body({ onSubmit }) {
     const [tasks, setTasks] = useState([]);
@@ -23,6 +24,7 @@ export default function Body({ onSubmit }) {
                         </li>
                     ))}
                 </ul>
+                <TaskSection taskList={tasks} />
             </div>
         </div>
     );
