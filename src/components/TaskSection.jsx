@@ -1,10 +1,12 @@
 import React from 'react';
 
 import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -25,7 +27,7 @@ export default function TaskSection({ taskList }) {
             </div>
         );
     }
-    
+
     return (
         <div id="taskSection">
             <Box
@@ -36,39 +38,35 @@ export default function TaskSection({ taskList }) {
                     padding: 2,
                 }}
             >
-                <List>
-                    <ListItem>
-                        <ListItemText primary='Task Name' />
-                        <ListItemText primary='Task TimeFrame' />
-                        <ListItemText primary='Delete Task' />
-                    </ListItem>
-                    {taskList.map((task, index) => (
-                        <ListItem
-                            key={index}
-                            secondaryAction={
-                                <IconButton edge="end" aria-label="delete">
-                                    <DeleteIcon />
-                                </IconButton>
-                            }
-                        >
-                            <ListItemText primary={task.task} />
-                            {task.timeFrame && (
-                                <ListItemText secondary={task.timeFrame} />
-                            )}
-                        </ListItem>
-                    ))}
-                </List>
+                <TableContainer>
+                    <Table>
+                        {/* Table Header */}
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Task Name</TableCell>
+                                <TableCell>Task TimeFrame</TableCell>
+                                <TableCell align="right">Actions</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        {/* Table Body */}
+                        <TableBody>
+                            {taskList.map((task, index) => (
+                                <TableRow key={index}>
+                                    <TableCell>{task.task}</TableCell>
+                                    <TableCell>
+                                        {task.timeFrame || "No Time Frame"}
+                                    </TableCell>
+                                    <TableCell align="right">
+                                        <IconButton edge="end" aria-label="delete">
+                                            <DeleteIcon />
+                                        </IconButton>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
             </Box>
         </div>
     );
 }
-
-
-
-// <ul>
-// {tasks.map((task, index) => (
-//     <li key={index}>
-//         {task.task} - {task.timeFrame || 'No Time Frame'}
-//     </li>
-// ))}
-// </ul>
