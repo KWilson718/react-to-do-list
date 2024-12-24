@@ -17,6 +17,11 @@
     padding: 1rem;
 }
 
+.bodySection {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 #footerComponent {
     min-height: 5vh;
 }
